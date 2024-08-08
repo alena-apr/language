@@ -1,0 +1,163 @@
+@import "./../../../../assets/scss/ui.scss";
+
+.auth__wrapper {
+  margin-top: -50px;
+  width: 700px;
+  height: 450px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.7);
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 630px;
+    height: 385px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    margin-top: -25px;
+    width: 467px;
+    height: 400px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    margin-top: -8px;
+    width: 467px;
+    height: 400px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input {
+  position: relative;
+  margin-bottom: 90px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    margin-bottom: 80px;
+    row-gap: 15px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    margin-bottom: 90px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    // margin-bottom: 70px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    margin-bottom: 60px;
+  }
+}
+
+.input__item {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    row-gap: 8px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    row-gap: 0;
+  }
+}
+
+.item-span {
+  color: rgb(33, 82, 90);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 44px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.item-input {
+  width: 340px;
+  padding-inline: 20px;
+  height: 68px;
+  border-radius: 50px;
+  font-size: 24px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+    height: 50px;
+  }
+}
+
+.error-warning {
+  position: absolute;
+  bottom: -60px;
+  // margin-top: -60px;
+  color: #6b3035;
+  font-weight: 600;
+  // text-align: center;
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    font-size: 12px;
+    line-height: 100%;
+    bottom: -45px;
+  }
+}

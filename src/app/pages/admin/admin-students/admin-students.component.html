@@ -1,0 +1,17 @@
+<div class="main-content container">
+    <h2 class="title h2">Students list</h2>
+    <div class="link">
+        <a routerLink="/exercises/admin">Go to dashboard</a>
+    </div>
+    @if(students) {
+    <div class="card-wrapper">
+        @for(student of students; track student._id) {
+        <div class="student-card" (click)="goToStudentPage(student)">
+            <span class="login">{{student.login}}</span>
+            <span class="id">{{student._id}}</span>
+            <span class="email">{{student.email}}</span>
+        </div>
+        }
+    </div>
+    }
+</div>

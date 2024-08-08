@@ -1,0 +1,171 @@
+.none {
+  display: none !important;
+}
+
+// /* Laptop */
+// @media (max-width: 1199px) {
+
+// }
+
+// /* Tablet */
+// @media (max-width: 990px) {
+
+// }
+
+// /* Mobile XS */
+// @media (max-width: 765px) {
+
+// }
+
+// /* Mobile XXS */
+// @media (max-width: 576px) {
+
+// }
+
+/* Laptop */
+@media (max-width: 1199px) {
+  .container {
+    width: 900px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 990px) {
+  .container {
+    width: 764px;
+  }
+}
+
+/* Mobile XS */
+@media (max-width: 765px) {
+  .container {
+    width: 575px;
+  }
+}
+
+/* Mobile XXS */
+@media (max-width: 576px) {
+  .container {
+    width: 320px;
+  }
+}
+
+.btnYellow {
+  width: 340px;
+  // height: 68px;
+  height: 60px;
+  // padding-inline: 40px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgba(236, 202, 129, 0.702);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 60px;
+  text-transform: uppercase;
+  color: rgb(84, 64, 50);
+  cursor: pointer;
+
+  transition: all 0.2s ease-in;
+
+  // &:hover {
+  //   border: 2px solid rgb(236, 181, 129);
+  // }
+
+  &:hover,
+  &:active {
+    background-color: #ecca81f2;
+  }
+
+  &:disabled {
+    background-color: rgba(184, 217, 222, 0.502);
+    color: rgba(84, 64, 50, 0.8);
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
+
+.h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 59px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29px;
+  }
+}
+
+.h2 {
+  color: rgb(13, 35, 40);
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 44px;
+  letter-spacing: 1.2px;
+  text-align: center;
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+  }
+
+}
+.h3 {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: 1.1px;
+  // text-align: center;
+  /* Mobile XS */
+  @media (max-width: 765px) {
+  font-size: 24px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    font-size: 18px;
+  }
+}
+
+.title {
+  margin-block: 30px;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    margin-block: 33px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    margin-block: 23px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    margin-top: 18px;
+    margin-bottom: 25px;
+  }
+}

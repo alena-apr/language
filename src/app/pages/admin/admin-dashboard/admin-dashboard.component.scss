@@ -1,0 +1,47 @@
+@import "../../../../assets/scss/vars.scss";
+@import "../../../../assets/scss/ui.scss";
+
+.link {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  font-size: 24px;
+  justify-content: center;
+}
+
+.section-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  padding: 15px;
+  margin-block: 30px;
+}
+
+.exercise-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  padding: 12px;
+  border: 1px solid $text;
+}
+
+.exercise-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.exercise-id {
+  font-size: 14px;
+  color: darkgrey;
+}
+
+.answer {
+  display: flex;
+  column-gap: 10px;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+}

@@ -1,0 +1,105 @@
+<div class="main-div">
+    <header class="header">
+        <div class="header__wrapper">
+            <div class="container header__content">
+                <div class="header__logo">
+                    <img src="/assets/img/logo-related/bigLogoNoBg.png" alt="">
+                </div>
+                <div class="header__content" *ngIf="showInitTemglate">
+                    <div class="header__desc h1">
+                        <p>Here you can get annoying but important exercises</p>
+                    </div>
+                    <div class="btn-wrapper">
+                        <button class="btnYellow" (click)="showAuth()">Log in</button>
+                        <button class="btnYellow" (click)="showReg()">Sign in</button>
+                    </div>
+                </div>
+                <div class="header__content" *ngIf="showAuthTemplate">
+                    <app-auth></app-auth>
+                </div>
+                <div class="header__content" *ngIf="showRegTemplate">
+                    <app-reg></app-reg>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="section">
+        <div class="container">
+            <div class="title h2">
+                What you can find here
+            </div>
+            <div class="card__wrapper">
+
+                <div class="card">
+                    <div class="card__img">
+                        <img src="/assets/img/icons/grammar.png" alt="">
+                    </div>
+                    <div class="card__info">
+                        <div class="casd__title">
+                            <p>Grammar</p>
+                        </div>
+                        <div class="card__desc">
+                            <p>Grammar exercises you don't like</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__img">
+                        <img src="/assets/img/icons/vocabulary.png" alt="">
+                    </div>
+                    <div class="card__info">
+                        <div class="casd__title">
+                            <p>Vocabulary</p>
+                        </div>
+                        <div class="card__desc">
+                            <p>In the near future you'll find here vocabulary exercises you don't like</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card__img">
+                        <img src="/assets/img/icons/listening.png" alt="">
+                    </div>
+                    <div class="card__info">
+                        <div class="casd__title">
+                            <p>Listening</p>
+                        </div>
+                        <div class="card__desc">
+                            <p>In the near future you'll find here listening exercises you don't like</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="fotter-info__wrapper">
+                <nav class="nav">
+                    <a href="">Main</a>
+                    <a href="">Shelf</a>
+                    <a href="">Grammar</a>
+                    <a href="">Vocabualry</a>
+                    <a href="">Listening</a>
+                </nav>
+                <ul class="list">
+                    <li><a href="">Log in</a></li>
+                    <li><a href="">Sign in</a></li>
+                    <li><a href="">Write me</a></li>
+                </ul>
+                <div class="footer__pics">
+                    <img src="/assets/img/icons/rain.png" alt="" class="rain">
+                    <img src="/assets/img/logo-related/umbrellaNoBg.png" alt="" class="logo">
+                </div>
+            </div>
+            <div class="footer__copyright">
+                <p> &#169; 2024 <span>Alёna Apr</span>. Часть прав защищена.</p>
+                <p>Сайт выполнен в образовательных целях для образовательных целей.</p>
+            </div>
+        </div>
+    </footer>
+</div>

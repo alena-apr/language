@@ -1,0 +1,43 @@
+@import '../../../../../assets/scss/vars.scss';
+@import '../../../../../assets/scss/ui.scss';
+@import '../../../../../assets/scss/statistics.scss';
+@import '../../../exercises/shelf/shelf.component.scss';
+
+.title-wrapper {
+    display: flex;
+    column-gap: 35px;
+    justify-content: center;
+}
+
+.one-answer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    margin: 25px;
+    padding: 15px;
+}
+
+.color-red {
+    color: $errorColor;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.real-answers, .student-answers {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.real-answer__item, .student-answer__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    background-color: $ligthBlue;
+}
+
+
+.link {
+    margin: 0 auto;
+    text-align: center;
+}

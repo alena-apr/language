@@ -1,0 +1,86 @@
+<div class="container main-content">
+
+    @if(student) {
+    <div class="title h3 title-wrapper">
+        <span>{{student.login}}</span>
+        <span>{{student.email}}</span>
+    </div>
+    }
+
+
+    <!-- <div class="link">
+        <a routerLink="/exercises/admin">Go to dashboard</a>
+    </div> -->
+
+
+    @if(statistics) {
+    @for(item of statistics; track item){
+    <div class="one-answer">
+        <span>Title: {{item.lastEx.title}}</span>
+        <span>Attempts number: {{item.tries}}</span>
+        <span>Last attempt correct answers: <span class="color-red">{{item.percentOfCorrectAnswers}}</span>  %</span>
+        <div class="real-answers">
+            <span>Real answers:</span>
+            @for (el of item.lastEx.realAnswers; track el) {
+            <div class="real-answer__item">
+                <span>{{el.id}}</span>
+                <span>{{el.answer}}</span>
+            </div>
+            }
+        </div>
+        <div class="student-answers">
+            <span>Student answers:</span>
+            @for (el of item.lastEx.studentAnswers; track el) {
+            <div class="student-answer__item">
+                <span>{{el.id}}</span>
+                <span>{{el.isCorrect}}</span>
+                <span>{{el.answer}}</span>
+            </div>
+            }
+        </div>
+    </div>
+
+    <!-- <div class="line-chart"> -->
+
+    <!-- <p-chart type="line" [data]="answer.line.data" [options]="answer.line.options" ></p-chart> -->
+    <!-- <p-chart type="pie" [data]="testData"  /> -->
+    <!-- </div> -->
+    }
+    }
+
+    <!-- @if (studentAnswers) {
+    <div *ngFor="let answer of studentAnswers">
+            {{answer.title}}
+        </div>
+    <div>
+        @for(answer of studentAnswers; track answer._id) {
+        <div>
+            {{answer._id}}
+            {{answer.title}}
+        </div>
+        }
+        @for(mistake of mistakeRate; track mistake) {
+        <div>
+            {{mistake}}
+        </div>
+        }
+    </div>
+    } -->
+    <!-- <ng-container *ngIf="studentAnswers"> -->
+
+    <!-- </ng-container> -->
+    <!-- <div *ngIf="student">
+        {{student.login}} <br>
+        {{student._id}} <br>
+        {{student.email}} <br>
+    </div> -->
+
+
+
+    <!-- <div *ngFor="let answer of studentAnswers">
+        {{answer}}
+        {{answer.title}} <br>
+        {{answer.realAnswers}} <br>
+        {{answer.studentAnswers}} <br>
+    </div> -->
+</div>

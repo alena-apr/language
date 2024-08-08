@@ -1,0 +1,9 @@
+%overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; // = righht: 0; Эти св-ва одинаково раятсягивают контейнер
+    height: 100%; // = bottom: 0;
+    background-color: rgba(0, 0, 0, 0.35);
+}

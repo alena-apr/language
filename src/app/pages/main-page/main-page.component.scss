@@ -1,0 +1,391 @@
+// @import "./../../../../assets/scss/mixins.scss";
+// @import "./../../../../assets/scss/ui.scss";
+@import "./../../../assets/scss/mixins.scss";
+@import "./../../../assets/scss/ui.scss";
+
+.header {
+  position: relative;
+  // background-image: url("../../../../assets/img/logo-related/umbBg3.png");
+  background-image: url("./../../../assets/img/logo-related/umbBg3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    @extend %overlay;
+  }
+}
+.header__wrapper {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 35px;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 70px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    padding-bottom: 90px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    padding-bottom: 58px;
+  }
+
+  /* Mobile M */
+  @media (max-width: 765px) {
+    padding-bottom: 90px;
+  }
+  /* Mobile S */
+  @media (max-width: 575px) {
+    padding-bottom: 65px;
+  }
+
+  /* Mobile S */
+  @media (max-width: 575px) {
+    padding-top: 25px;
+  }
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__logo {
+  width: 350px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  margin-bottom: 65px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 295px;
+    margin-bottom: 55px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    width: 200px;
+    margin-bottom: 38px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    width: 150px;
+    margin-bottom: 15px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 125px;
+    margin-bottom: 27px;
+  }
+}
+
+.header__desc {
+  width: 745px;
+  margin-bottom: 100px;
+  text-align: center;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 650px;
+    margin-bottom: 57px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    width: 590px;
+    margin-bottom: 54px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    width: 490px;
+    margin-bottom: 35px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+    margin-bottom: 42px;
+  }
+}
+.btn-wrapper {
+  display: flex;
+  column-gap: 115px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    column-gap: 100px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    flex-direction: column;
+    row-gap: 45px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    row-gap: 55px;
+  }
+}
+
+.section {
+  margin-bottom: 100px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    margin-bottom: 90px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    margin-bottom: 85px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    margin-bottom: 58px;
+  }
+}
+
+.title {
+  margin-block: 43px;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    margin-block: 46px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    margin-block: 36px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    margin-top: 28px;
+    margin-bottom: 38px;
+  }
+}
+
+.card__wrapper {
+  display: flex;
+  justify-content: space-around;
+  row-gap: 270px;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    flex-direction: column;
+    row-gap: 46px;
+  }
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    row-gap: 25px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    flex-direction: row;
+    justify-content: space-around;
+    column-gap: 50px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    flex-direction: column;
+  }
+}
+.card__img {
+  width: 150px;
+  margin-bottom: 45px;
+  background-color: rgb(236, 244, 245);
+  border-radius: 50%;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    margin-bottom: 0;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+}
+.card__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    text-align: left;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    text-align: center;
+  }
+}
+.casd__title {
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  letter-spacing: 0px;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    text-align: left;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+  }
+}
+.card__desc {
+  width: 200px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    width: 460px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    width: 290px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+  }
+}
+
+.footer {
+  background-color: rgb(214, 207, 194);
+}
+
+.fotter-info__wrapper {
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 43px;
+  padding-bottom: 30px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    padding-block: 20px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    flex-direction: column;
+    row-gap: 45px;
+  }
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  row-gap: 17px;
+
+  a {
+    color: rgb(84, 64, 50);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+  }
+}
+.list li + li {
+  margin-top: 17px;
+
+  a {
+    color: rgb(84, 64, 50);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+  }
+}
+
+.footer__pics {
+  img {
+    width: 100px;
+  }
+}
+
+.rain {
+  position: absolute;
+  right: 10%;
+  top: 2%;
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    right: 5%;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    top: 15%;
+  }
+}
+
+.logo {
+  position: absolute;
+  right: 15%;
+  top: 40%;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    top: 45%;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    right: 7%;
+  }
+}
+
+.footer__copyright {
+  padding-bottom: 15px;
+  color: rgb(194, 179, 152);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
+
+  span {
+    font-weight: 700;
+  }
+}

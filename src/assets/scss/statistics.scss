@@ -1,0 +1,113 @@
+@import './vars.scss';
+@import './ui.scss';
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  width: 1100px;
+  padding: 20px;
+  column-gap: 20px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 990px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    row-gap: 20px;
+    column-gap: 0px;
+    box-shadow: 3px 5px 30px 12px rgba(13, 35, 40, 0.06);
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    width: 730px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    width: 550px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 300px;
+  }
+}
+
+.all-exercises-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  row-gap: 20px;
+  border: 1px solid rgba(13, 35, 40, 0.3);
+  border-radius: 50px;
+  width: 75%;
+
+  @media (max-width: 1199) {
+    width: 100%;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    width: 530px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+    border: none;
+
+  }
+}
+
+.line-chart {
+  width: 100%;
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    display: none;
+  }
+}
+
+.text-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1199px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.doughnut-cart {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.percentage {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 43%;
+}
+
+.percent {
+  font-size: 36px;
+  font-weight: 700;
+  color: #eccb81;
+}

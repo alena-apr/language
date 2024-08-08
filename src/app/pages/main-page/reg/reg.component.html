@@ -1,0 +1,54 @@
+<div class="auth__wrapper">
+    <form class="form" [formGroup]="regForm" (ngSubmit)="onSubmit()">
+        <div class="input">
+            <div class="input__item">
+                <input class="item-input" placeholder="Login" type="text" id="login" formControlName="login" />
+            </div>
+            <div class="input__item">
+                <input class="item-input" placeholder="Password" type="password" id="psw" formControlName="psw" />
+            </div>
+            <div class="input__item">
+                <input class="item-input" placeholder="Repeat password" type="password" id="pswRepeat"
+                    formControlName="pswRepeat" />
+            </div>
+            <div class="input__item">
+                <input class="item-input" placeholder="E-mail" type="email" id="email" formControlName="email" />
+            </div>
+
+            <ng-container
+                *ngIf="regForm.controls.psw.touched && regForm.controls.psw.dirty && regForm.controls.psw.errors?.minlength && regForm.controls.psw.errors?.passwordStrength"
+                [ngTemplateOutlet]="strongPsw"></ng-container>
+            <ng-container *ngIf="!isPswSame && showNote" [ngTemplateOutlet]="isSamePsw"></ng-container>
+            <ng-container *ngIf="showHttpError && showNote" [ngTemplateOutlet]="http"></ng-container>
+            <ng-container
+                *ngIf="regForm.controls.login.touched && regForm.controls.login.dirty && regForm.controls.login.errors?.loginStrength"
+                [ngTemplateOutlet]="admin"></ng-container>
+
+        </div>
+
+
+
+        <button class="btnYellow" type="submit" [disabled]="!regForm.valid">Регистрация</button>
+    </form>
+</div>
+
+<ng-template #strongPsw>
+    <div class="error-warning">
+        <p>
+            Password must contain at least six characters, at least one number and both lower and uppercase letters
+        </p>
+    </div>
+</ng-template>
+<ng-template #isSamePsw>
+    <div class="error-warning">
+       Passwords don't match
+    </div>
+</ng-template>
+<ng-template #http>
+    <div class="error-warning">{{httpError}}</div>
+</ng-template>
+<ng-template #admin>
+    <div class="error-warning">
+        Мы в курсе, что вы не админ!
+    </div>
+</ng-template>

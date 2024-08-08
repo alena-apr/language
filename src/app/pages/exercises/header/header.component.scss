@@ -1,0 +1,262 @@
+@import "./../../../../assets/scss/mixins.scss";
+@import "./../../../../assets/scss/ui.scss";
+
+@import "./../../../../assets/scss/vars.scss";
+
+.header {
+  position: relative;
+  background-image: url("/assets/img/logo-related/umbBg3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &::before {
+    @extend %overlay;
+  }
+}
+.header__wrapper {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 50px;
+  padding-bottom: 50px;
+  text-align: center;
+  color: $text;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile M */
+  @media (max-width: 765px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  /* Mobile S */
+  @media (max-width: 575px) {
+  }
+
+  /* Mobile S */
+  @media (max-width: 575px) {
+  }
+}
+
+.header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bg-wrapper-big {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+
+  width: 1000px;
+  height: 100px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 825px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    width: 670px;
+  }
+
+  /* Mobile M */
+  @media (max-width: 765px) {
+    width: 515px;
+  }
+  /* Mobile S */
+  @media (max-width: 575px) {
+    width: 280px;
+  }
+}
+
+.header__logo {
+  width: 100px;
+  border-radius: 50%;
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 60px;
+  }
+}
+
+.hello {
+  font-size: 36px;
+  font-weight: 500;
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    font-size: 24px;
+  }
+
+  /* Mobile M */
+  @media (max-width: 765px) {
+    display: none;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  column-gap: 30px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    column-gap: 20px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile M */
+  @media (max-width: 765px) {
+    column-gap: 80px;
+  }
+  /* Mobile S */
+  @media (max-width: 575px) {
+    column-gap: 20px;
+  }
+}
+
+.bookshelf-logo {
+  width: 100px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 80px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile M */
+  @media (max-width: 765px) {
+  }
+  /* Mobile S */
+  @media (max-width: 575px) {
+    width: 60px;
+  }
+}
+
+.exit-logo {
+  width: 80px;
+  cursor: pointer;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 60px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+  }
+
+  /* Mobile M */
+  @media (max-width: 765px) {
+  }
+  /* Mobile S */
+  @media (max-width: 575px) {
+    width: 50px;
+  }
+}
+
+.bg-wrapper-small {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 915px;
+  height: 70px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+
+  font-size: 24px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 700px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    width: 630px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    width: 400px;
+    height: auto;
+    flex-direction: column;
+    row-gap: 20px;
+    padding-block: 10px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 250px;
+    font-size: 20px;
+  }
+}
+
+.header__desc {
+  width: 745px;
+  margin-bottom: 100px;
+  text-align: center;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 650px;
+    margin-bottom: 57px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    width: 590px;
+    margin-bottom: 54px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    width: 490px;
+    margin-bottom: 35px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+    margin-bottom: 42px;
+  }
+}
+.btn-wrapper {
+  display: flex;
+  column-gap: 115px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    column-gap: 100px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    flex-direction: column;
+    row-gap: 45px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    row-gap: 55px;
+  }
+}

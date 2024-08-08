@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="header__wrapper">
+        <div class="container header__content">
+            <div class="bg-wrapper-big">
+                <a class="header__logo" routerLink="start">
+                    <img src="/assets/img/logo-related/umbrellaNoBg.png" alt="">
+                </a>
+                <div *ngIf="user" class="hello">
+                    It's tougth, {{user.login}}!
+                </div>
+                <div class="icons">
+                    <a routerLink="shelf" class="bookshelf-logo" click="">
+                        <img src="/assets/img/icons/bookshelf.png" alt="Bookshelf">
+                    </a>
+                    <a class="exit-logo" (click)="logOut()">
+                        <img src="/assets/img/icons/exit.png" alt="Exit">
+                    </a>
+
+                </div>
+            </div>
+            <div class="bg-wrapper-small">
+                <a routerLink="grammar">Grammar</a>
+                <a href="">Vocabulary</a>
+                <a href="">Listening</a>
+            </div>
+        </div>
+    </div>
+</div>

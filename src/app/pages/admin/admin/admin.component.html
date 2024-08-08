@@ -1,0 +1,44 @@
+<div class="container main-content">
+    <p class="title h2">Add exercise</p>
+
+    <div class="link">
+        <a routerLink="/exercises/admin">Go to dashboard</a>
+    </div>
+
+    <form class="form" [formGroup]="exerciseForm">
+        <div class="main-group">
+            <span class="label">Type (input | select): </span><input class="input" type="text" formControlName="type">
+            <span class="label">Title:</span> <input class="input-medium" type="text" formControlName="title">
+            <span class="label">Difficulty (typeof number):</span> <input class="input" type="text"
+                formControlName="difficulty">
+        </div>
+
+
+        <div formArrayName="realAnswers">
+            <div *ngFor="let realAnswer of realAnswers.controls; let i =index">
+                <div [formGroupName]="i" class="text-group">
+                    <div>
+                        <span class="label">Text group {{i}} </span>
+                        <button class="btn-delete" (click)="removeRealAnswers(i)">Delete group {{i}}</button>
+                    </div>
+                    <span class="label">Id (typeof number): </span><input class="input" type="text"
+                        formControlName="id">
+                    <span class="label">Answer: </span><input class="input-medium" type="text" formControlName="answer">
+                    <span class="label">Text (*** stands for input): </span><input class="input-long" type="text"
+                        formControlName="text">
+                </div>
+
+
+            </div>
+        </div>
+        <button class="btn-small" (click)="addRealAnswers()">add</button>
+    </form>
+
+    <br><br><br>
+    <button class="btn-small" (click)="showPayload()">payload</button>
+    <br><br><br>
+    <pre>{{payload}}</pre>
+    <br><br><br>
+    <button class="btnYellow margin" (click)="sendFormattedForm()" [disabled]="!exerciseForm.valid">Send
+        formattedForm</button>
+</div>

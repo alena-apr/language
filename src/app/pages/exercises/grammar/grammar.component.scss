@@ -1,0 +1,70 @@
+@import "../../../../assets/scss/vars.scss";
+@import "../../../../assets/scss/ui.scss";
+
+.search-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  row-gap: 15px;
+}
+
+.item-input {
+  width: 340px;
+  padding-inline: 20px;
+  height: 68px;
+  border-radius: 50px;
+  font-size: 24px;
+  box-shadow: 0px 0px 45px 3px rgba(170, 220, 227, 0.4) inset;
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+    height: 50px;
+  }
+}
+
+.cards-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  cursor: pointer;
+}
+
+.exercise-title {
+  text-align: center;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 10px;
+}
+
+.difficulty {
+  display: flex;
+  column-gap: 8px;
+}
+
+.logo-img {
+  width: 35px;
+  background-color: rgb(236, 244, 245);
+  border-radius: 50%;
+}
+
+.aline {
+  text-align: center;
+}

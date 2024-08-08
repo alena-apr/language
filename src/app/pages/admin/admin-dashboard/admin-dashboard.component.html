@@ -1,0 +1,32 @@
+<div class="container main-content">
+    <nav class="link title h3">
+        <a routerLink="add">Add exercise</a>
+        <a routerLink="students">Students</a>
+        <!-- <a href="">Smth2</a>
+        <a href="">Smth3</a> -->
+    </nav>
+
+    <div class="section-wrapper">
+        @if(allExercises) {
+        @for(exercise of allExercises; track exercise._id ) {
+        <div class="exercise-wrapper">
+            <div class="exercise-title">Title: {{exercise.title}}</div>
+            <div class="exercise-id">id: {{exercise._id}}</div>
+            <div>Difficulty: {{exercise.difficulty}}</div>
+            <div class="answer">@for(answer of exercise.realAnswers; track answer.id) {
+                <div>{{answer.id}}</div>
+                <div>{{answer.answer}}</div>
+                }
+            </div>
+
+            <div class="text">@for(text of exercise.text; track text.id) {
+                <div>{{text.id}}</div>
+                <div>{{text.text}}</div>
+                }
+            </div>
+            <!-- <button class="btnYellow" (click)="deleteExerciseById(exercise._id)">Delete exercise</button> -->
+        </div>
+        }
+        }
+    </div>
+</div>

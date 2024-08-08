@@ -1,0 +1,41 @@
+<div class="container main-content">
+
+    <div class="title h2">Grammar</div>
+
+    <div class="search-wrapper">
+        <div class="h3">Find exercise:</div>
+        <input type="text" class="item-input" #grammarSearchByTitle>
+    </div>
+
+    @if(grammarExs && grammarExs.length > 0) {
+    <div class="cards-wrapper">
+        @for(exercise of grammarExs; track exercise) {
+        <div class="card" (click)="goToExercisePage(exercise)">
+            <h3 class="h3 exercise-title">{{exercise.title}}</h3>
+            <div class="description">
+            <p>Difficulty</p>
+                <div class="difficulty" [ngSwitch]="exercise.difficulty">
+                    <ng-template [ngSwitchCase]="1">
+                        <div class="logo-img"><img src="assets/img/icons/rain.png" alt="rain"></div>
+                    </ng-template>
+                    <ng-template [ngSwitchCase]="2">
+                        <div class="logo-img"><img src="assets/img/icons/rain.png" alt="rain"></div>
+                        <div class="logo-img"><img src="assets/img/icons/rain.png" alt="rain"></div>
+                    </ng-template>
+                    <ng-template [ngSwitchCase]="3">
+                        <div class="logo-img"><img src="assets/img/icons/rain.png" alt="rain"></div>
+                        <div class="logo-img"><img src="assets/img/icons/rain.png" alt="rain"></div>
+                        <div class="logo-img"><img src="assets/img/icons/rain.png" alt="rain"></div>
+                    </ng-template>
+                </div>
+            </div>
+        </div>
+        }
+    </div>
+    }
+    @else {
+    <div class="h3 aline">
+        Nothing found
+    </div>
+    }
+</div>

@@ -1,0 +1,93 @@
+// @import './../auth/auth.component.scss';
+@import "./../auth/auth.component.scss";
+
+.auth__wrapper {
+  margin-top: -50px;
+  width: 700px;
+  height: 450px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.7);
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    width: 630px;
+    height: 400px;
+  }
+
+  /* Tablet */
+  @media (max-width: 990px) {
+    margin-top: -25px;
+    width: 467px;
+  }
+
+  /* Mobile XS */
+  @media (max-width: 765px) {
+    margin-top: -8px;
+    width: 467px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 300px;
+    height: 355px;
+  }
+}
+
+.input {
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  row-gap: 20px;
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    row-gap: 15px;
+    margin-bottom: 65px;
+  }
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    margin-top: 10px;
+    row-gap: 10px;
+    margin-bottom: 50px;
+  }
+}
+
+.input__item {
+
+  /* Laptop */
+  @media (max-width: 1199px) {
+    row-gap: 0;
+  }
+}
+
+.item-input::placeholder {
+  color: rgba(33, 82, 90, 0.705);
+}
+
+.item-input {
+  width: 340px;
+  padding-inline: 20px;
+  height: 50px;
+  border-radius: 50px;
+  font-size: 24px;
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    width: 280px;
+    height: 50px;
+  }
+}
+
+.error-warning {
+  text-align: center;
+  color: #6b3035;
+  font-weight: 600;
+
+  /* Mobile XXS */
+  @media (max-width: 576px) {
+    font-size: 12px;
+    line-height: 100%;
+    bottom: -45px;
+  }
+}
